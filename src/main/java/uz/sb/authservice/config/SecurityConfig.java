@@ -7,6 +7,8 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import uz.sb.authservice.filter.CustomFilter;
 
 @Configuration
 public class SecurityConfig {
@@ -26,7 +28,8 @@ public class SecurityConfig {
                         authorizeRequests
                                 .requestMatchers(WHITE_LIST).permitAll()
                                 .anyRequest().authenticated()
-                )
+                ).addFilterBefore(new CustomFilter(),
+                        UsernamePasswordAuthenticationFilter.class)
                 .build();
     }
 }

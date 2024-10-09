@@ -1,6 +1,6 @@
 package uz.sb.authservice.servise.block;
 
-import uz.sb.authservice.domain.dto.request.BlockingRequest;
+import uz.sb.domain.dto.request.BlockingRequest;
 
 public interface BlockingService {
 

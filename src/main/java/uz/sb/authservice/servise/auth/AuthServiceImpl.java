@@ -4,13 +4,13 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import uz.sb.authservice.domain.dto.request.LoginDto;
-import uz.sb.authservice.domain.dto.request.UserRequest;
-import uz.sb.authservice.domain.dto.response.JwtResponse;
-import uz.sb.authservice.domain.dto.response.UserResponse;
 import uz.sb.authservice.domain.entity.UserEntity;
 import uz.sb.authservice.repository.AuthRepository;
 import uz.sb.authservice.servise.JwtService;
+import uz.sb.domain.dto.request.LoginDto;
+import uz.sb.domain.dto.request.UserRequest;
+import uz.sb.domain.dto.response.JwtResponse;
+import uz.sb.domain.dto.response.UserResponse;
 
 import java.time.LocalDate;
 
