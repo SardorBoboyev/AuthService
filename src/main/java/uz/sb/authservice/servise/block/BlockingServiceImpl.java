@@ -2,10 +2,10 @@ package uz.sb.authservice.servise.block;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import uz.sb.authservice.domain.dto.request.BlockingRequest;
 import uz.sb.authservice.domain.entity.BlockingEntity;
 import uz.sb.authservice.repository.AuthRepository;
 import uz.sb.authservice.repository.BlockingRepository;
+import uz.sb.domain.dto.request.BlockingRequest;
 
 
 @Service
