@@ -5,6 +5,7 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import uz.sb.authservice.domain.entity.UserEntity;
+import uz.sb.authservice.exception.DataNotFoundException;
 import uz.sb.authservice.repository.AuthRepository;
 import uz.sb.authservice.servise.JwtService;
 import uz.sb.domain.dto.request.LoginDto;
@@ -36,7 +37,7 @@ public class AuthServiceImpl implements AuthService {
         try {
             authRepository.save(userEntity);
         } catch (DataIntegrityViolationException e) {
-            throw new RuntimeException("Username already exists");
+            throw new DataNotFoundException("Username already exists");
         }
 
         UserResponse build = UserResponse.builder()
@@ -54,10 +55,10 @@ public class AuthServiceImpl implements AuthService {
     @Override
     public JwtResponse login(LoginDto loginDto) {
         UserEntity userEntity = authRepository.findByUsername(loginDto.getUsername())
-                .orElseThrow(() -> new RuntimeException("User not found"));
+                .orElseThrow(() -> new DataNotFoundException("User not found"));
 
         if (!passwordEncoder.matches(loginDto.getPassword(), userEntity.getPassword())) {
-            throw new RuntimeException("Password is incorrect");
+            throw new DataNotFoundException("Password is incorrect");
         }
 
         return new JwtResponse(jwtService.generateAccessToken(userEntity),
@@ -66,7 +67,7 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public UserResponse findById(Long id) {
-        UserEntity user = authRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
+        UserEntity user = authRepository.findById(id).orElseThrow(() -> new DataNotFoundException("User not found"));
         UserResponse build = UserResponse.builder()
                 .username(user.getUsername())
                 .phoneNumber(user.getPhoneNumber())
