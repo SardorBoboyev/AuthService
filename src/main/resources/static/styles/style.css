@@ -1,0 +1,33 @@
+/* Стиль для всей страницы */
+body {
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Фиолетовый градиент фона */
+    font-family: 'Roboto', sans-serif;
+    color: #f8f9fa;
+}
+
+#main-content {
+    margin-top: 100px;
+}
+
+.btn.custom-btn {
+    background-color: #6a11cb; /* Фиолетовый цвет кнопок */
+    color: white;
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn.custom-btn:hover {
+    background-color: #5e10b3; /* Более темный оттенок при наведении */
+    color: #fff;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный серый */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}

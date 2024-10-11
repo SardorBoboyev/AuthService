@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" th:href="@{/styles/sign-up.css}">
+    <script th:src="@{/scripts/auth.js}"></script>
+    <script th:src="@{/scripts/util.js}"></script>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@7.0.0/bundles/stomp.umd.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="form">
+    <div class="login_box">
+        <h1>Sign Up</h1>
+        <p>Hey there! Enter your details to get sign up.</p>
+        <input type="text" placeholder="username" class="email" id="username">
+        <div class="error" id="usernameError"></div> <!-- Элемент для ошибки -->
+
+        <input type="password" placeholder="password" class="password" id="password">
+        <div class="error" id="passwordError"></div> <!-- Элемент для ошибки -->
+
+        <input type="text" class="email" placeholder="firstName" id="firstName">
+        <div class="error" id="firstNameError"></div> <!-- Элемент для ошибки -->
+
+        <input type="text" class="email" placeholder="lastName" id="lastName">
+        <div class="error" id="lastNameError"></div> <!-- Элемент для ошибки -->
+
+        <input type="text" class="email" placeholder="phone number" id="phoneNumber">
+        <div class="error" id="phoneNumberError"></div> <!-- Элемент для ошибки -->
+
+        <input type="date" class="email" placeholder="date of birth" id="dateOfBirth">
+        <div class="error" id="dateOfBirthError"></div> <!-- Элемент для ошибки -->
+
+        <button class="sign_in" id="sign-up" onclick="signUp()">Sign Up</button>
+    </div>
+</div>
+
+</body>
+</html>
