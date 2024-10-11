@@ -1,0 +1,94 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #8e44ad, #2c3e50); /* Фиолетовый и серый градиент */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form {
+    background-color: #f8f9fa; /* Светло-серый */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.login_box h1 {
+    color: #8e44ad; /* Фиолетовый */
+    margin-bottom: 10px;
+}
+
+.login_box p {
+    color: #7f8c8d; /* Серый текст */
+    margin-bottom: 20px;
+}
+
+.email, .password {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.sign_in {
+    background-color: #8e44ad; /* Фиолетовая кнопка */
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 15px 0;
+    transition: background-color 0.3s;
+}
+
+.sign_in:hover {
+    background-color: #732d91; /* Темнее при наведении */
+}
+
+button[type="submit"] {
+    background-color: #bdc3c7; /* Серый для кнопки входа */
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 15px 0;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #95a5a6; /* Темнее при наведении */
+}
+
+a {
+    text-decoration: none;
+}
+
+span {
+    color: #8e44ad;
+    cursor: pointer;
+}
+
+span:hover {
+    text-decoration: underline;
+}
+.error {
+    font-size: 0.9em; /* Немного увеличим размер шрифта для лучшей читаемости */
+    margin-top: 5px;
+    color: #c62828; /* Красный цвет для текста ошибок */
+    background-color: #f8d7da; /* Светло-красный фон для выделения сообщения */
+    border: 1px solid #f5c6cb; /* Легкая рамка вокруг сообщения */
+    border-radius: 4px; /* Закругленные углы для более мягкого вида */
+    padding: 10px; /* Внутренние отступы для удобства чтения */
+    display: none; /* Скрыто по умолчанию, будет отображаться при наличии ошибок */
+}
+
