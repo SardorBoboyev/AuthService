@@ -29,8 +29,8 @@ repositories {
         name = "GitHubPackages"
         url = uri("https://maven.pkg.github.com/SardorBoboyev/LibraryForChat")
         credentials {
-            username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_USER")
-            password = project.findProperty("gpr.token") ?: System.getenv("GITHUB_TOKEN")
+            username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+            password = project.findProperty("gpr.token") ?: System.getenv("TOKEN")
         }
     }
 
