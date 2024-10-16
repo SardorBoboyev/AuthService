@@ -27,9 +27,9 @@ jobs:
           chmod +x ./gradlew
           ./gradlew clean build
 
-        env:
-          USERNAME: ${{ secrets.USERNAME }}
-          TOKEN: ${{ secrets.TOKEN }}
+#        env:
+#          USERNAME: ${{ secrets.USERNAME }}
+#          TOKEN: ${{ secrets.TOKEN }}
 
 
       # Step 4: Set up Docker
