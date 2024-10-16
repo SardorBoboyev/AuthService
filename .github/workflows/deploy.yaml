@@ -46,5 +46,5 @@ jobs:
       # Step 6: Build and push Docker image
       - name: Build and push Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/auth-service:latest .
-          docker push ${{ secrets.DOCKER_USERNAME }}/auth-service:latest
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/auth-service1:latest .
+          docker push ${{ secrets.DOCKER_USERNAME }}/auth-service1:latest
