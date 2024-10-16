@@ -2,8 +2,9 @@ package uz.sb.authservice.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+import uz.sb.authservice.domain.dto.request.BlockingRequest;
 import uz.sb.authservice.servise.block.BlockingService;
-import uz.sb.domain.dto.request.BlockingRequest;
+
 
 @RestController
 @RequestMapping("/api/block")

@@ -1,9 +1,10 @@
 package uz.sb.authservice.servise.auth;
 
-import uz.sb.domain.dto.request.LoginDto;
-import uz.sb.domain.dto.request.UserRequest;
-import uz.sb.domain.dto.response.JwtResponse;
-import uz.sb.domain.dto.response.UserResponse;
+
+import uz.sb.authservice.domain.dto.request.LoginDto;
+import uz.sb.authservice.domain.dto.request.UserRequest;
+import uz.sb.authservice.domain.dto.response.JwtResponse;
+import uz.sb.authservice.domain.dto.response.UserResponse;
 
 public interface AuthService {
 
