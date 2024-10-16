@@ -5,9 +5,9 @@ spring:
   application:
     name: CONTACT-SERVICE
   datasource:
-    url: jdbc:postgresql://${DB_HOST:localhost}:5432/chat_database
+    url: jdbc:postgresql://${DB_HOST:localhost}:5432/chat
     username: ${DB_USERNAME:postgres}
-    password: ${DB_PASSWORD:samarkand2004@@}
+    password: ${DB_PASSWORD:1234}
   jpa:
     hibernate:
       ddl-auto: update
