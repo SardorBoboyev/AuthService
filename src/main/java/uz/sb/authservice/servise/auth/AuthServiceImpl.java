@@ -48,8 +48,8 @@ public class AuthServiceImpl implements AuthService {
                 .phoneNumber(user.getPhoneNumber())
                 .build();
         build.setId(userEntity.getId());
-        build.setCreatedAt(userEntity.getCreatedAt());
-        build.setUpdatedAt(userEntity.getUpdatedAt());
+        build.setCreatedAt(userEntity.getCreatedDate());
+        build.setUpdatedAt(userEntity.getUpdatedDate());
         return build;
     }
 
@@ -76,8 +76,8 @@ public class AuthServiceImpl implements AuthService {
                 .lastName(user.getLastname())
                 .build();
         build.setId(user.getId());
-        build.setCreatedAt(user.getCreatedAt());
-        build.setUpdatedAt(user.getUpdatedAt());
+        build.setCreatedAt(user.getCreatedDate());
+        build.setUpdatedAt(user.getUpdatedDate());
         return build;
     }
 }
