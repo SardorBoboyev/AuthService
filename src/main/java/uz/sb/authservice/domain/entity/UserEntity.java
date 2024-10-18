@@ -22,7 +22,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class UserEntity {
+public class UserEntity  {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
