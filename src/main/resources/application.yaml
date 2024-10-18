@@ -28,6 +28,7 @@ eureka:
 
 
 
+
 jwt:
   secret: vn54uignvurigh8gt9vetrghnu5gieuirgnerj5i5
   accessTokenExpiration: 3500000
