@@ -19,16 +19,19 @@ public class CustomFilter extends OncePerRequestFilter {
             throws ServletException, IOException {
 
         String username = request.getHeader("X-Username");
+/*
         String roles = request.getHeader("X-Roles");
+*/
 
-        if (username == null || roles == null) {
+        if (username == null) {
             filterChain.doFilter(request, response);
             return;
         }
 
 
         UsernamePasswordAuthenticationToken authenticationToken =
-                new UsernamePasswordAuthenticationToken(username, null, List.of(new SimpleGrantedAuthority(roles)));
+                new UsernamePasswordAuthenticationToken(username, null, null);
+
         SecurityContextHolder.getContext().setAuthentication(authenticationToken);
 
         filterChain.doFilter(request, response);

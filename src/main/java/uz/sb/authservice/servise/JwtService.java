@@ -23,7 +23,7 @@ public class JwtService {
     public String generateAccessToken(UserEntity user) {
         return Jwts.builder()
                 .subject(user.getUsername())
-                .claims(Map.of("roles", "USER"))
+                /*.claims(Map.of("roles", "USER"))*/
                 .issuedAt(new Date())
                 .signWith(Keys.hmacShaKeyFor(secret.getBytes()))
                 .expiration(new Date(System.currentTimeMillis() + accessTokenExpiration))
