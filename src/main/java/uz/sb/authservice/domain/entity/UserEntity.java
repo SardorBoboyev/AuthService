@@ -29,10 +29,10 @@ public class UserEntity implements UserDetails {
     private Long id;
 
     @CreationTimestamp
-    private LocalDateTime createdAt;
+    private LocalDateTime createdDate;
 
     @UpdateTimestamp
-    private LocalDateTime updatedAt;
+    private LocalDateTime updatedDate;
 
     @Column(unique = true)
     private String username;
