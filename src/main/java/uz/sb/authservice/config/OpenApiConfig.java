@@ -22,4 +22,5 @@ public class OpenApiConfig {
                 .pathsToMatch("/api/block/**")
                 .build();
     }
+
 }
