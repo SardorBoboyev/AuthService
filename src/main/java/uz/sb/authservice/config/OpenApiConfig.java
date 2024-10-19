@@ -14,6 +14,7 @@ public class OpenApiConfig {
                 .build();
     }
 
+
     @Bean
     public GroupedOpenApi blockingApi() {
         return GroupedOpenApi.builder()
