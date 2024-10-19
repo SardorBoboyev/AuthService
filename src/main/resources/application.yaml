@@ -6,12 +6,12 @@ spring:
   application:
     name: AUTH-SERVICE
   datasource:
-    url: jdbc:postgresql://${DB_HOST:localhost}:5432/sardor
+    url: jdbc:postgresql://${DB_HOST:localhost}:5432/my_test
     username: ${DB_USERNAME:postgres}
-    password: ${DB_PASSWORD:2004}
+    password: ${DB_PASSWORD:rayaandmaya1426}
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     show-sql: true
     properties:
       hibernate:
@@ -34,8 +34,9 @@ jwt:
   accessTokenExpiration: 3500000
   refreshTokenExpiration: 85500000
 
+
 springdoc:
   swagger-ui:
-    config-url: /api/auth/v3/api-docs/swagger-config
-    url: /api/auth/swagger-ui
     path: /api/auth/swagger-ui
+  api-docs:
+    path: /api/auth/v3/api-docs
