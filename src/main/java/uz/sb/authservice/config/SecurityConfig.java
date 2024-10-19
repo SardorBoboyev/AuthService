@@ -13,8 +13,14 @@ import uz.sb.authservice.filter.CustomFilter;
 @Configuration
 public class SecurityConfig {
 
-    private final String[] WHITE_LIST = {"/api/auth/login", "/api/auth/register", "/api/auth/swagger-ui/**",
-            "/api/auth/v3/api-docs/**"};
+    private final String[] WHITE_LIST = {"/api/auth/login",
+            "/api/auth/register",
+            "/api/auth/swagger-ui/**",
+            "/api/auth/v3/api-docs/**",
+            "/v3/api-docs/",
+            "/swagger-ui/",
+            "/swagger-ui.html"
+    };
 
     @Bean
     public PasswordEncoder passwordEncoder() {
