@@ -19,6 +19,7 @@ public class CustomFilter extends OncePerRequestFilter {
             throws ServletException, IOException {
 
         String username = request.getHeader("X-Username");
+
 /*
         String roles = request.getHeader("X-Roles");
 */
