@@ -6,9 +6,9 @@ spring:
   application:
     name: AUTH-SERVICE
   datasource:
-    url: jdbc:postgresql://${DB_HOST:localhost}:5432/my_test
+    url: jdbc:postgresql://${DB_HOST:localhost}:5432/sardor
     username: ${DB_USERNAME:postgres}
-    password: ${DB_PASSWORD:rayaandmaya1426}
+    password: ${DB_PASSWORD:2004}
   jpa:
     hibernate:
       ddl-auto: update
@@ -31,7 +31,7 @@ eureka:
 
 jwt:
   secret: vn54uignvurigh8gt9vetrghnu5gieuirgnerj5i5
-  accessTokenExpiration: 3500000
+  accessTokenExpiration: 35000000
   refreshTokenExpiration: 85500000
 
 

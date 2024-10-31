@@ -25,14 +25,14 @@ configurations {
 
 repositories {
     mavenCentral()
-//    maven {
-//        name = "GitHubPackages"
-//        url = uri("https://maven.pkg.github.com/SardorBoboyev/LibraryForChat")
-//        credentials {
-//            username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
-//            password = project.findProperty("gpr.token") ?: System.getenv("TOKEN")
-//        }
-//    }
+    maven {
+        name = "GitHubPackages"
+        url = uri("https://maven.pkg.github.com/SardorBoboyev/LibraryForChat")
+        credentials {
+            username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+            password = project.findProperty("gpr.token") ?: System.getenv("TOKEN")
+        }
+    }
 
 }
 
@@ -45,7 +45,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-websocket'
     implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
 
-//    implementation 'uz.sb:library-for-chat:1.1.0'
+    implementation 'uz.sb:library-for-chat:1.1.2'
 
     compileOnly 'org.projectlombok:lombok'
     runtimeOnly 'org.postgresql:postgresql'
