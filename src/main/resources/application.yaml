@@ -6,7 +6,7 @@ spring:
   application:
     name: AUTH-SERVICE
   datasource:
-    url: jdbc:postgresql://${DB_HOST:localhost}:5432/sardor
+    url: jdbc:postgresql://${DB_HOST:localhost}:5432/my_test
     username: ${DB_USERNAME:postgres}
     password: ${DB_PASSWORD:2004}
   jpa:
